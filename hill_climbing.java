@@ -27,7 +27,7 @@ hill_climbing(Function<Integer, Integer> f, int x0) // ใช้รับ functi
 			neighbors,
 			Comparator.comparingInt(
 				f::apply)); // find the neighbor with the highest function value
-		//					
+		// เงื่อนไขการหยุดทำงาน					
 		if (f.apply(best_neighbor)
 			<= f.apply(x)) // ตรวจสอบว่าค่าฟังก์ชัน f ของ best neighbor น้อยกว่าหรือเท่ากับ ค่าฟังก์ชัน f ของ x
 			return x; // return x
