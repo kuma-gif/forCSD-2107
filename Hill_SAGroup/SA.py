@@ -4,12 +4,11 @@ import math
 # ฟังก์ชัน objective_function คำนวณค่าของฟังก์ชัน
 # โดยในที่นี้เราให้ฟังก์ชันนี้คำนวณค่าของ (x - 5) ** 2 แล้วทำการกลับเครื่องหมาย
 # เพื่อให้ค่าที่น้อยที่สุดกลับเป็นค่าที่มากที่สุดและแสดงให้เป็นค่าติดลบ
-def objective_function(x):
+def objective_function(x): # x = ค่า inital state
     return -((x - 5) ** 2)
 
 # ฟังก์ชัน get_neighbour ใช้ในการสร้างสถานะใหม่ (neighbors)
-# โดยการสุ่มเลขจำนวนเต็มในช่วง (-max_step, max_step) 
-# แล้วนำมาบวกกับสถานะปัจจุบันเพื่อให้ได้สถานะใหม่
+# โดยการสุ่มเลขจำนวนเต็มในช่วง (-max_step, max_step) แล้วนำมาบวกกับสถานะปัจจุบันเพื่อให้ได้สถานะใหม่
 def get_neighbour(current, max_step):
     return current + random.uniform(-max_step, max_step) 
 
@@ -62,8 +61,6 @@ def simulated_annealing_search(initial_state, max_iterations, max_step, initial_
 
      # ส่งค่า best state , best value กลับ
     return best_state, best_value
-
-
 
 # กำหนดค่า
 initial_state = 0
