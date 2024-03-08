@@ -26,7 +26,7 @@ def accept_probability(delta_e, temperature):
 # โดยเริ่มต้นจากสถานะเริ่มต้น initial_state และทำการลูป max_iterations
 # โดยทุกครั้งจะสร้างสถานะใหม่ และใช้ accept_probability เพื่อตัดสินใจในการยอมรับสถานะใหม่
 # และทำการปรับอุณหภูมิเพื่อลดการยอมรับสถานะที่แย่ลง
-# สุดท้ายจะส่งคืนสถานะที่ดีที่สุด (best_state) และค่าของฟังก์ชันวัตถุประสงค์ที่ดีที่สุด (best_value)
+# สุดท้ายจะส่งคืนสถานะที่ดีที่สุด (best_state) และค่าของฟังก์ชันที่ดีที่สุด (best_value)
 def simulated_annealing_search(initial_state, max_iterations, max_step, initial_temperature, cooling_rate):
     current_state = initial_state
     current_value = objective_function(initial_state)
