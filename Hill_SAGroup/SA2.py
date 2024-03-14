@@ -21,20 +21,10 @@ def accept_probability(delta_e, temperature):
     else:
         return 1.0
 
-
-
-# ฟังก์ชัน simulated_annealing_search ใช้ในการทำการค้นหาด้วย Simulated Annealing
-# โดยเริ่มต้นจากสถานะเริ่มต้น initial_state และทำการลูป max_iterations ครั้ง
-# โดยทุกครั้งจะสร้างสถานะใหม่ และใช้ accept_probability เพื่อตัดสินใจในการยอมรับสถานะใหม่
-# และทำการปรับอุณหภูมิเพื่อลดการยอมรับสถานะที่แย่ลง
-# สุดท้ายจะส่งคืนสถานะที่ดีที่สุด (best_state) และค่าของฟังก์ชันที่ดีที่สุด (best_value)
-
-# กำหนดสถานะเริ่มต้น (initial state) ของการค้นหา ,กำหนดจำนวนรอบสูงสุด (maximum_iterations) ของการค้นหา
-
 def simulated_annealing_search(initial_state, max_iterations, max_step, initial_temperature, cooling_rate):
     #  กำหนดค่าให้ตัวเเปร currrent_state มีค่าเท่ากับ initial_state 
     current_state = initial_state 
-    # เรียกใช้ def objective_function(x) 
+    # เรียกใช้ func objective_function(x) 
     current_value = objective_function(initial_state) 
     # กำหนดค่าให้ตัวเเปร best_state มีค่าเท่ากับ current_state
     best_state = current_state 
